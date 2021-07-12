@@ -1,1 +1,1 @@
-# GA---Project-Zero---Tomagotchi-
+# GA: Project-Zero-Tomagotchi
