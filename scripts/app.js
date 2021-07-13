@@ -70,6 +70,8 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
 // Make a starting evolution = egg
     // Have a button that will start the evolution and move on to the first stage
 // Add progress bar instead to show decreasing properties 
+// Create a way to restart the game i.e. button
+// No repeating buttons. Must choose button other than what was pressed 
 
 
 // SECTION: Milestones // 
@@ -80,12 +82,12 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
     // After user name input have the prompt disappear -- NOTE: DONE!
 // create a progress bar or someway to show case decrease in hunger-- NOTE: DONE, sleepiness, and boredom (increase these bars at a set intervals)
 // create timer to showase age of pet --> when will the pet evolve? how will we increment timer?
+    // Morph the pet at X minutes
 // create the buttons that user will use in game (hunger -- NOTE: DONE!, sleepiness, boredom, lights) --> what value will each button hold when user press? 
 // create triggers for killing pet (when any of the properties hits 10 trigger death)
     // HUNGER -- NOTE: DONE!
     // SLEEP
     // BORDEOM
-// Morph the pet at X minutes
 // Animate the pet
 // Style the page
 
@@ -97,10 +99,7 @@ const tomagotchi = {
         age: 0,
         petName: ``,
 
-
     // SECTION: METHODS //
-
-    
 
     enterName() {
         petName = $(`#fill_pet_name`).val();
