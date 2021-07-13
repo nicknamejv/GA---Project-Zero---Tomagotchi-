@@ -69,6 +69,7 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
 
 // Make a starting evolution = egg
     // Have a button that will start the evolution and move on to the first stage
+// Add progress bar instead to show decreasing properties 
 
 
 // SECTION: Milestones // 
@@ -77,17 +78,17 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
 // create the prompt that will ask user to input pet's name -- NOTE: DONE!
     // Have the user input change html text when given -- NOTE: DONE!
     // After user name input have the prompt disappear -- NOTE: DONE!
-// create a progress bar or someway to show case decrease in hunger, sleepiness, and boredom (increase these bars at a set intervals)
+// create a progress bar or someway to show case decrease in hunger-- NOTE: DONE, sleepiness, and boredom (increase these bars at a set intervals)
 // create timer to showase age of pet --> when will the pet evolve? how will we increment timer?
-// create the buttons that user will use in game (hunger, sleepiness, boredom, lights) --> what value will each button hold when user press? 
+// create the buttons that user will use in game (hunger -- NOTE: DONE!, sleepiness, boredom, lights) --> what value will each button hold when user press? 
 // create triggers for killing pet (when any of the properties hits 10 trigger death)
+    // HUNGER -- NOTE: DONE!
+    // SLEEP
+    // BORDEOM
 // Morph the pet at X minutes
 // Animate the pet
 // Style the page
 
-/*
-    1. create our tomagotchi class --> this will hold the following: name, hunger, sleepiness, bordedom, & age
-*/
 
 const tomagotchi = {
         hungerLevel: 100,
@@ -129,13 +130,65 @@ const tomagotchi = {
             $(`#hunger_level`).text(`${tomagotchi.hungerLevel}`);
         }
     },
+
+    // SECTION: PLAY //
+    play: null,
+
+    playDeplete() {
+        play = setInterval(tomagotchi.reduceBoredom, 1000); // TODO: CHANGE INTERVAL AT END
+    },
+
+    reduceBoredom() {
+        tomagotchi.boredomLevel-=10;
+        $(`#play_level`).text(`${tomagotchi.boredomLevel}`);
+        if (tomagotchi.boredomLevel <= 0) {
+            alert (`${petName} has died of boredom!`);
+            clearInterval(this.play);
+        }
+    },
+
+    playMe() {
+        if (tomagotchi.boredomLevel < 100) {
+            tomagotchi.boredomLevel+=5;
+            $(`#play_level`).text(`${tomagotchi.boredomLevel}`);
+        }
+    },
+
+    // SECTION: PLAY //
+    sleep: null,
+
+    sleepDeplete() {
+        sleep = setInterval(tomagotchi.reduceSleep, 2000); // TODO: CHANGE INTERVAL AT END
+    },
+
+    reduceSleep() {
+        tomagotchi.sleepLevel-=15;
+        $(`#sleep_level`).text(`${tomagotchi.sleepLevel}`);
+        if (tomagotchi.sleepLevel <= 0) {
+            alert (`${petName} has died from lost of sleep!`);
+            clearInterval(this.sleep);
+        }
+    },
+
+    sleepMe() {
+        if (tomagotchi.sleepLevel < 100) {
+            tomagotchi.sleepLevel+=5;
+            $(`#sleep_level`).text(`${tomagotchi.sleepLevel}`);
+        }
+    },
 };
 
-// SECTION: BUTTONS //
+// SECTION: BUTTON START GAME //
 $(`#click_me`).on(`click`, tomagotchi.enterName);
-
 $(`#click_me`).on(`click`, tomagotchi.hungerDeplete);
+$(`#click_me`).on(`click`, tomagotchi.playDeplete);
+$(`#click_me`).on(`click`, tomagotchi.sleepDeplete);
 
+
+
+// SECTION: BUTTONS TO INCREASE //
 $(`#hunger_button`).on(`click`, tomagotchi.feedMe);
+$(`#play_button`).on(`click`, tomagotchi.playMe);
+$(`#sleep_button`).on(`click`, tomagotchi.sleepMe);
 
 
