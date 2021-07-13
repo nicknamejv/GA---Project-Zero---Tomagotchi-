@@ -89,32 +89,53 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
     1. create our tomagotchi class --> this will hold the following: name, hunger, sleepiness, bordedom, & age
 */
 
-const Tomagotchi = {
+const tomagotchi = {
         hungerLevel: 100,
         sleepLevel: 100,
         boredomLevel: 100,
         age: 0,
+        petName: ``,
+
 
     // SECTION: METHODS //
 
+    
+
     enterName() {
-        const petName = $(`#fill_pet_name`).val();
+        petName = $(`#fill_pet_name`).val();
         $(`#pet_name h2`).text(`Hello World! My name is ${petName}!`);
         $(`#fill_pet_name`).val(``);
     },
 
+    // SECTION: HUNGER //
+    hunger: null,
+
     hungerDeplete() {
-        setInterval(this.reduceHunger, 1000);
+        hunger = setInterval(tomagotchi.reduceHunger, 1000); // TODO: CHANGE INTERVAL AT END
     },
 
     reduceHunger() {
-        this.hungerLevel-=5;
-        $(`#hunger_level`).text(this.hungerLevel);
+        tomagotchi.hungerLevel-=5;
+        $(`#hunger_level`).text(`${tomagotchi.hungerLevel}`);
+        if (tomagotchi.hungerLevel <= 0) {
+            alert (`${petName} has died of hunger!`);
+            clearInterval(this.hunger);
+        }
+    },
+
+    feedMe() {
+        if (tomagotchi.hungerLevel < 100) {
+            tomagotchi.hungerLevel+=5;
+            $(`#hunger_level`).text(`${tomagotchi.hungerLevel}`);
+        }
     },
 };
 
 // SECTION: BUTTONS //
-$(`#click_me`).on(`click`, Tomagotchi.enterName);
-$(`#click_me`).on(`click`, Tomagotchi.hungerDeplete);
+$(`#click_me`).on(`click`, tomagotchi.enterName);
+
+$(`#click_me`).on(`click`, tomagotchi.hungerDeplete);
+
+$(`#hunger_button`).on(`click`, tomagotchi.feedMe);
 
 
