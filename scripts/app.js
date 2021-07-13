@@ -70,8 +70,8 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
 
 // SECTION: Milestones // 
 
+// create our game object --> name, hunger, sleepiness, boredom, age -- NOTE: DONE!
 // create the prompt that will ask user to input pet's name 
-// create our game object --> name, hunger, sleepiness, bordedom, age
 // create timer to showase age of pet --> when will the pet evolve? how will we increment timer?
 // create a event listener on button to start the game --> in this case it will hatch the egg and reveal the pet ? *maybe might take this idea out and just have a already hatched egg*
 // create the buttons that user will use in game (hunger, sleepiness, boredom, lights) --> what value will each button hold when user press? 
@@ -80,3 +80,18 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
 // Morph the pet at X minutes
 // Animate the pet
 // Style the page
+
+/*
+    1. create our tomagotchi class --> this will hold the following: name, hunger, sleepiness, bordedom, & age
+*/
+
+class Tomagotchi {
+    constructor(name) {
+        this.name = name;
+        this.hungerLevel = 0;
+        this.sleepLevel = 0;
+        this.boredomLevel = 0;
+        this.age = 0;
+    }
+}
+
