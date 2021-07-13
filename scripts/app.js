@@ -77,9 +77,9 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
 // create the prompt that will ask user to input pet's name -- NOTE: DONE!
     // Have the user input change html text when given -- NOTE: DONE!
     // After user name input have the prompt disappear -- NOTE: DONE!
+// create a progress bar or someway to show case decrease in hunger, sleepiness, and boredom (increase these bars at a set intervals)
 // create timer to showase age of pet --> when will the pet evolve? how will we increment timer?
 // create the buttons that user will use in game (hunger, sleepiness, boredom, lights) --> what value will each button hold when user press? 
-// create a progress bar or someway to show case increase in hunger, sleepiness, and boredom (increase these bars at a set intervals)
 // create triggers for killing pet (when any of the properties hits 10 trigger death)
 // Morph the pet at X minutes
 // Animate the pet
@@ -90,9 +90,9 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
 */
 
 const Tomagotchi = {
-        hungerLevel: 0,
-        sleepLevel: 0,
-        boredomLevel: 0,
+        hungerLevel: 100,
+        sleepLevel: 100,
+        boredomLevel: 100,
         age: 0,
 
     // SECTION: METHODS //
@@ -102,8 +102,19 @@ const Tomagotchi = {
         $(`#pet_name h2`).text(`Hello World! My name is ${petName}!`);
         $(`#fill_pet_name`).val(``);
     },
+
+    hungerDeplete() {
+        setInterval(this.reduceHunger, 1000);
+    },
+
+    reduceHunger() {
+        this.hungerLevel-=5;
+        $(`#hunger_level`).text(this.hungerLevel);
+    },
 };
 
 // SECTION: BUTTONS //
 $(`#click_me`).on(`click`, Tomagotchi.enterName);
+$(`#click_me`).on(`click`, Tomagotchi.hungerDeplete);
+
 
