@@ -67,13 +67,17 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
 // SECTION: Feature Creep //
 // NOTE: This will list any features that come to mind along the way to be included after MVP
 
+// Make a starting evolution = egg
+    // Have a button that will start the evolution and move on to the first stage
+
 
 // SECTION: Milestones // 
 
 // create our game object --> name, hunger, sleepiness, boredom, age -- NOTE: DONE!
-// create the prompt that will ask user to input pet's name 
+// create the prompt that will ask user to input pet's name -- NOTE: DONE!
+    // Have the user input change html text when given -- NOTE: DONE!
+    // After user name input have the prompt disappear -- NOTE: DONE!
 // create timer to showase age of pet --> when will the pet evolve? how will we increment timer?
-// create a event listener on button to start the game --> in this case it will hatch the egg and reveal the pet ? *maybe might take this idea out and just have a already hatched egg*
 // create the buttons that user will use in game (hunger, sleepiness, boredom, lights) --> what value will each button hold when user press? 
 // create a progress bar or someway to show case increase in hunger, sleepiness, and boredom (increase these bars at a set intervals)
 // create triggers for killing pet (when any of the properties hits 10 trigger death)
@@ -85,13 +89,21 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
     1. create our tomagotchi class --> this will hold the following: name, hunger, sleepiness, bordedom, & age
 */
 
-class Tomagotchi {
-    constructor(name) {
-        this.name = name;
-        this.hungerLevel = 0;
-        this.sleepLevel = 0;
-        this.boredomLevel = 0;
-        this.age = 0;
-    }
-}
+const Tomagotchi = {
+        hungerLevel: 0,
+        sleepLevel: 0,
+        boredomLevel: 0,
+        age: 0,
+
+    // SECTION: METHODS //
+
+    enterName() {
+        const petName = $(`#fill_pet_name`).val();
+        $(`#pet_name h2`).text(`Hello World! My name is ${petName}!`);
+        $(`#fill_pet_name`).val(``);
+    },
+};
+
+// SECTION: BUTTONS //
+$(`#click_me`).on(`click`, Tomagotchi.enterName);
 
