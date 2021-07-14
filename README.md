@@ -2,7 +2,29 @@
 
 ![Image of Star Wars Pixel](http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/ced5403101d612d.png)
 
-#### Scripts Used:
+
+# Objective
+To create a user interactive game that replicates the well known hand-held device called "Tamagotchi". Included in this are the same conditions as any Tamagotchi which is to keep them alive by playing, feeding, or having them sleep. 
+
+# User Story
+1. To start the game you will have to first give your pet a name of your choosing and click the "Start Game" button.
+2. You will notice soon after that each bar under your pet is now decreasing at various intervals. If any of these values hit 10 your pet will die. In order to prevent this you must click the corresponding buttons to feed, play, or put your pet to sleep. 
+3. As you continue keeping your pet alive it will evolve to something else at various ages so do your best to keep it alive and see the final transformation!
+# Wireframe 
+
+![Image of Wireframes](https://github.com/nicknamejv/GA-Project-0-Tomagotchi/blob/469c6d1c2777ec9cc2676a522d38fa773b00fc94/Wireframe/PHASE%202%20-%20PET%20EVO.png)
+
+# Unsolved Problems/Feature Creep
+```
+This will be updated at the end.
+```
+
+# Installation
+1. Fork this repo
+2. Clone the repo into your desired directory
+3. All scripts used is listed below just simply add them to your HTML
+
+# Scripts Used:
 
 FontAwesome
 
@@ -27,7 +49,7 @@ NES.css
 <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
 ```
 
-#### Resources Used: 
+## Resources Used: 
 
 Images 
 
