@@ -154,6 +154,7 @@ const tomagotchi = {
     reduceHunger() {
         tomagotchi.hungerLevel-=5;
         $(`#hunger_level`).text(`${tomagotchi.hungerLevel}`);
+        $(`#hunger_bar`).attr(`value`, `${tomagotchi.hungerLevel}`);
         if (tomagotchi.hungerLevel <= 0) {
             alert (`${petName} has died of hunger!`);
             clearInterval(this.hunger);
@@ -164,6 +165,7 @@ const tomagotchi = {
         if (tomagotchi.hungerLevel < 100) {
             tomagotchi.hungerLevel+=5;
             $(`#hunger_level`).text(`${tomagotchi.hungerLevel}`);
+            $(`#hunger_bar`).attr(`value`, `${tomagotchi.hungerLevel}`);
         }
     },
 
@@ -177,6 +179,7 @@ const tomagotchi = {
     reduceBoredom() {
         tomagotchi.boredomLevel-=10;
         $(`#play_level`).text(`${tomagotchi.boredomLevel}`);
+        $(`#play_bar`).attr(`value`, `${tomagotchi.boredomLevel}`);
         if (tomagotchi.boredomLevel <= 0) {
             alert (`${petName} has died of boredom!`);
             clearInterval(this.play);
@@ -187,6 +190,7 @@ const tomagotchi = {
         if (tomagotchi.boredomLevel < 100) {
             tomagotchi.boredomLevel+=5;
             $(`#play_level`).text(`${tomagotchi.boredomLevel}`);
+            $(`#play_bar`).attr(`value`, `${tomagotchi.boredomLevel}`);
         }
     },
 
@@ -200,6 +204,7 @@ const tomagotchi = {
     reduceSleep() {
         tomagotchi.sleepLevel-=15;
         $(`#sleep_level`).text(`${tomagotchi.sleepLevel}`);
+        $(`#sleep_bar`).attr(`value`, `${tomagotchi.sleepLevel}`);
         if (tomagotchi.sleepLevel <= 0) {
             alert (`${petName} has died from lost of sleep!`);
             clearInterval(this.sleep);
@@ -210,6 +215,7 @@ const tomagotchi = {
         if (tomagotchi.sleepLevel < 100) {
             tomagotchi.sleepLevel+=5;
             $(`#sleep_level`).text(`${tomagotchi.sleepLevel}`);
+            $(`#sleep_bar`).attr(`value`, `${tomagotchi.sleepLevel}`);
         }
     },
 
