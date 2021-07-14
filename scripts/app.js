@@ -104,22 +104,42 @@ const tomagotchi = {
         hungerLevel: 100,
         sleepLevel: 100,
         boredomLevel: 100,
-        age: 0,
         petName: ``,
 
 
-    // SECTION: METHODS //
+    // SECTION: NAME //
     enterName() {
         petName = $(`#fill_pet_name`).val();
         $(`#pet_name h2`).text(`Hello World! My name is ${petName}!`);
         $(`#fill_pet_name`).val(``);
     },
 
+    // SECTION: EVOLUTION //
+    age: 0,
+    time: 0,
+
+    evolutionStart() {
+        time = setInterval(tomagotchi.whenToEvolve, 1000); // TODO: CHANGE INTERVAL AT END
+    },
+
+    whenToEvolve() {
+        tomagotchi.time++;
+        $(`#timer`).text(`Timer: ${tomagotchi.time}`);
+        if (tomagotchi.time % 10 === 0) {
+            tomagotchi.age++;
+            $(`#age`).text(`Age: ${tomagotchi.age}`);
+        } else if (tomagotchi.age === 5) {
+            $(`img`).attr(`src`, `http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/1c5de380c0d107a.png`);
+        } else if (tomagotchi.age === 10) {
+            $(`img`).attr(`src`, `/Images/K2SO.png`);
+        }
+    },
+
     // SECTION: HUNGER //
-    hunger: null,
+    hunger: 0,
 
     hungerDeplete() {
-        hunger = setInterval(tomagotchi.reduceHunger, 1000); // TODO: CHANGE INTERVAL AT END
+        hunger = setInterval(tomagotchi.reduceHunger, 2000); // TODO: CHANGE INTERVAL AT END
     },
 
     reduceHunger() {
@@ -139,10 +159,10 @@ const tomagotchi = {
     },
 
     // SECTION: PLAY //
-    play: null,
+    play: 0,
 
     playDeplete() {
-        play = setInterval(tomagotchi.reduceBoredom, 1000); // TODO: CHANGE INTERVAL AT END
+        play = setInterval(tomagotchi.reduceBoredom, 2000); // TODO: CHANGE INTERVAL AT END
     },
 
     reduceBoredom() {
@@ -162,7 +182,7 @@ const tomagotchi = {
     },
 
     // SECTION: SLEEP //
-    sleep: null,
+    sleep: 0,
 
     sleepDeplete() {
         sleep = setInterval(tomagotchi.reduceSleep, 2000); // TODO: CHANGE INTERVAL AT END
@@ -179,7 +199,7 @@ const tomagotchi = {
 
     sleepMe() {
         if (tomagotchi.sleepLevel < 100) {
-            tomagotchi.sleepLevel+=5;
+            tomagotchi.sleepLevel+=10;
             $(`#sleep_level`).text(`${tomagotchi.sleepLevel}`);
         }
     },
@@ -197,6 +217,7 @@ const tomagotchi = {
 
 // SECTION: BUTTON START GAME //
 $(`#click_me`).on(`click`, tomagotchi.enterName);
+$(`#click_me`).on(`click`, tomagotchi.evolutionStart);
 $(`#click_me`).on(`click`, tomagotchi.hungerDeplete);
 $(`#click_me`).on(`click`, tomagotchi.playDeplete);
 $(`#click_me`).on(`click`, tomagotchi.sleepDeplete);
@@ -207,6 +228,8 @@ $(`#click_me`).on(`click`, tomagotchi.sleepDeplete);
 $(`#hunger_button`).on(`click`, tomagotchi.feedMe);
 $(`#play_button`).on(`click`, tomagotchi.playMe);
 $(`#sleep_button`).on(`click`, tomagotchi.sleepMe);
+
+
 
 // SECTION: LIGHTS BUTTON //
 $(document).ready(function() {
