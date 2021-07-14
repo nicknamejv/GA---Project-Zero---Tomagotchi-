@@ -69,7 +69,7 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
 
 // Make a starting evolution = egg
     // Have a button that will start the evolution and move on to the first stage
-// Add progress bar instead to show decreasing properties 
+// Add progress bar instead to show decreasing properties -- NOTE: DONE
 // Create a way to restart the game i.e. button
 // No repeating buttons. Must choose button other than what was  -- NOTE: DONE
 // Animate the pet in a more complex manner
@@ -99,7 +99,7 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
 // Animate the pet -- TODO: DONE! but could be improved on!
 // Style the page -- TODO
 // WHAT IS THE WIN CONDITON? -- TODO
-// ADJUST LIGHT BUTTON TO DARKEN BACKGROUND AND IMAGE -- TODO
+// ADJUST LIGHT BUTTON TO DARKEN BACKGROUND AND IMAGE -- NOTE: DONE
 
 
 const tomagotchi = {
