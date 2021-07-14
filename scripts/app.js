@@ -64,14 +64,15 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
 - Will hunger, boredom, or sleepiness showcase different pictures based on its level? 
 */
 
-// SECTION: Feature Creep //
+// TODO: Feature Creep //
 // NOTE: This will list any features that come to mind along the way to be included after MVP
 
 // Make a starting evolution = egg
     // Have a button that will start the evolution and move on to the first stage
 // Add progress bar instead to show decreasing properties 
 // Create a way to restart the game i.e. button
-// No repeating buttons. Must choose button other than what was pressed 
+// No repeating buttons. Must choose button other than what was pressed
+// Animate the pet in a more complex manner
 
 
 // SECTION: Milestones // 
@@ -80,15 +81,22 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
 // create the prompt that will ask user to input pet's name -- NOTE: DONE!
     // Have the user input change html text when given -- NOTE: DONE!
     // After user name input have the prompt disappear -- NOTE: DONE!
-// create a progress bar or someway to show case decrease in hunger-- NOTE: DONE, sleepiness, and boredom (increase these bars at a set intervals)
+// createsomeway to show case decrease in:
+    // hunger-- NOTE: DONE
+    // sleepiness-- NOTE:DONE
+    // boredom-- NOTE: DONE
 // create timer to showase age of pet --> when will the pet evolve? how will we increment timer?
     // Morph the pet at X minutes
-// create the buttons that user will use in game (hunger -- NOTE: DONE!, sleepiness, boredom, lights) --> what value will each button hold when user press? 
+// create the buttons that user will use in game  --> what value will each button hold when user press? 
+    // hunger -- NOTE: DONE!
+    // sleepiness -- NOTE: DONE! 
+    // boredom -- NOTE: DONE
+    // lights -- 
 // create triggers for killing pet (when any of the properties hits 10 trigger death)
     // HUNGER -- NOTE: DONE!
-    // SLEEP
-    // BORDEOM
-// Animate the pet
+    // SLEEP -- NOTE: DONE!
+    // BORDEOM -- NOTE: DONE!
+// Animate the pet -- TODO: DONE! but could be improved on!
 // Style the page
 
 
@@ -99,8 +107,8 @@ const tomagotchi = {
         age: 0,
         petName: ``,
 
-    // SECTION: METHODS //
 
+    // SECTION: METHODS //
     enterName() {
         petName = $(`#fill_pet_name`).val();
         $(`#pet_name h2`).text(`Hello World! My name is ${petName}!`);
@@ -153,7 +161,7 @@ const tomagotchi = {
         }
     },
 
-    // SECTION: PLAY //
+    // SECTION: SLEEP //
     sleep: null,
 
     sleepDeplete() {
@@ -175,7 +183,17 @@ const tomagotchi = {
             $(`#sleep_level`).text(`${tomagotchi.sleepLevel}`);
         }
     },
+
+    lightSwitchOff() {
+        $(`.image`).toggleClass(`.turn_off`);
+    },
+
+    lightSwitchOn() {
+        $(`.image`).toggleClass(`.turn_on`);
+    },
 };
+
+
 
 // SECTION: BUTTON START GAME //
 $(`#click_me`).on(`click`, tomagotchi.enterName);
@@ -189,5 +207,13 @@ $(`#click_me`).on(`click`, tomagotchi.sleepDeplete);
 $(`#hunger_button`).on(`click`, tomagotchi.feedMe);
 $(`#play_button`).on(`click`, tomagotchi.playMe);
 $(`#sleep_button`).on(`click`, tomagotchi.sleepMe);
+
+// SECTION: LIGHTS BUTTON //
+$(document).ready(function() {
+    $(`#light_button`).on(`click`, function() {
+        $(`#pet_image`).toggleClass(`turn_off`);
+        $(`.image`).toggleClass(`turn_on`);
+    });
+});
 
 
