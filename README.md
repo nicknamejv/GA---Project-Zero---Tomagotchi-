@@ -1,10 +1,8 @@
-GA: Project-Zero-Tomagotchi
+# GA: Project-Zero-Tomagotchi
 
 ![Image of Star Wars Pixel](http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/ced5403101d612d.png)
 
-http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/ced5403101d612d.png
-
-Scripts Used:
+#### Scripts Used:
 
 FontAwesome
 
@@ -27,4 +25,26 @@ NES.css
 
 ```
 <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+```
+
+#### Resources Used: 
+
+Images 
+
+- C3PO
+    http://pixelartmaker.com/art/3846b31fd64b59f
+
+
+- R2D2
+    http://pixelartmaker.com/art/1c5de380c0d107a
+
+
+- BB8
+    http://pixelartmaker.com/art/59142c45cab8ba7
+
+
+Font
+
+```
+https://fonts.googleapis.com/css2?family=VT323&display=swap
 ```

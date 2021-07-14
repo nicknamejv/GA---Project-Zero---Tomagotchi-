@@ -140,7 +140,7 @@ const tomagotchi = {
         } else if (tomagotchi.age === 5) {
             $(`img`).attr(`src`, `http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/1c5de380c0d107a.png`);
         } else if (tomagotchi.age === 10) {
-            $(`img`).attr(`src`, `/Images/K2SO.png`);
+            $(`img`).attr(`src`, `http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/3846b31fd64b59f.png`);
         }
     },
 
