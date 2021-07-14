@@ -30,16 +30,28 @@ body {
     border-radius: 10%;
 }
 
+.image {
+    padding: 10px;
+    margin: 10px;
+}
+
 #pet_age {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     justify-content: space-evenly;
+    gap: 10%;
 }
 
 #pet_age, #pet_name, #enter_name {
     padding: 5px;
     margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#fill_pet_name {
+    padding: 5px;
+    font-size: 15px;
 }
 
 #pet_image {
@@ -48,9 +60,6 @@ body {
     animation: bounce;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-}
-
-#pet_age, #pet_name, #enter_name {
 }
 
 .turn_off {
@@ -65,20 +74,28 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1px;
+    padding: 5px;
+    font-size: 30px;
 }
 
 button {
     padding: 5px;
+    margin: 5px;
+    width: 80px;
+    height: 35px;
 }
 
 .buttons {
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30%; 
+    text-align: center;
+    gap: 5%;
+}
+
+#hunger_button, #play_button, #sleep_button {
+    width: 200px;
+    height: 100px;
 }
 
 #hunger_level, #sleep_level, #play_level, #light_image {
@@ -90,7 +107,9 @@ button {
 #click_me {
     padding: 5px;
     margin: 5px;
+    font-size: 10px;
 }
+
 
 /* IMG 2: http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/1c5de380c0d107a.png
 

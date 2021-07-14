@@ -71,7 +71,7 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
     // Have a button that will start the evolution and move on to the first stage
 // Add progress bar instead to show decreasing properties 
 // Create a way to restart the game i.e. button
-// No repeating buttons. Must choose button other than what was pressed
+// No repeating buttons. Must choose button other than what was  -- NOTE: DONE
 // Animate the pet in a more complex manner
 
 
@@ -99,6 +99,7 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
 // Animate the pet -- TODO: DONE! but could be improved on!
 // Style the page -- TODO
 // WHAT IS THE WIN CONDITON? -- TODO
+// ADJUST LIGHT BUTTON TO DARKEN BACKGROUND AND IMAGE -- TODO
 
 
 const tomagotchi = {
@@ -120,7 +121,6 @@ const tomagotchi = {
     enterName() {
         petName = $(`#fill_pet_name`).val();
         $(`#pet_name h2`).text(`Hello World! My name is ${petName}!`);
-        $(`#fill_pet_name`).val(``);
     },
 
     // SECTION: EVOLUTION //

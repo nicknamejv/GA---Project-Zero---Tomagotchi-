@@ -7,6 +7,8 @@
 
         <!-- Main CSS -->
         <link rel="stylesheet" href="styles/main.css">
+        <!-- NES.css -->
+        <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
         <!-- Animate.css -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <!-- FontAwesome -->
@@ -24,22 +26,23 @@
     </header>
 
     <main id="background">
-        <time id="pet_age">
-            <h3 id="timer">Timer: 0</h3>
-            <h3 id="age">Age: 0</h3>
-        </time>
+        <section class="pet_info">
+            <time id="pet_age">
+                <h3 id="timer">Timer: 0</h3>
+                <h3 id="age">Age: 0</h3>
+            </time>
 
-        <div id="pet_name">
-            <h2>Hello World! My name is...!</h2>
-        </div>
+            <div id="pet_name">
+                <h2>Hello World! My name is...!</h2>
+            </div>
 
-        <div id="enter_name">
-            <input type="text" id="fill_pet_name" placeholder="Enter Name: ">
-            <button id="click_me">CLICK ME!</button>
-        </div>
-        
+            <div id="enter_name">
+                <input type="text" id="fill_pet_name" placeholder="Enter Name: ">
+                <button id="click_me">START GAME!</button>
+            </div>
+        </section>
         <figure class="image">
-            <img id="pet_image" src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/59142c45cab8ba7.png" alt="pet_picture" height="700" width="600">
+            <img id="pet_image" src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/59142c45cab8ba7.png" alt="pet_picture">
         </figure>
     </main>
 
@@ -47,16 +50,19 @@
     <section class="buttons">
         <div id="hunger_button">
             <span id="hunger_level">100</span>
+            <progress class="nes-progress is-error" value="100" max="100"></progress>
             <button>HUNGER</button>
         </div>
 
         <div id="play_button">
             <span id="play_level">100</span>
+            <progress class="nes-progress is-primary" value="100" max="100"></progress>
             <button>PLAY</button>
         </div>
 
         <div id="sleep_button">
             <span id="sleep_level">100</span>
+            <progress class="nes-progress is-success" value="100" max="100"></progress>
             <button>SLEEP</button>
         </div>
 
