@@ -2,8 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
+
+:root {
+    --floral-white: #fffcf2ff;
+    --pale-silver: #ccc5b9ff;
+    --black-olive: #403d39ff;
+    --eerie-black: #252422ff;
+    --flame: #eb5e28ff;
+}
+
 
 body {
     min-height: 100vh;
@@ -17,7 +26,7 @@ body {
 #background {
     padding: 15px;
     margin: 5px;
-    border: solid 20px #CFDBD5;
+    border: solid 20px var(--black-olive);
     border-radius: 10%;
 }
 
@@ -69,7 +78,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5%;
+    gap: 30%; 
 }
 
 #hunger_level, #sleep_level, #play_level, #light_image {

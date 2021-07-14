@@ -208,7 +208,7 @@ const tomagotchi = {
 
     sleepMe() {
         if (tomagotchi.sleepLevel < 100) {
-            tomagotchi.sleepLevel+=10;
+            tomagotchi.sleepLevel+=5;
             $(`#sleep_level`).text(`${tomagotchi.sleepLevel}`);
         }
     },
