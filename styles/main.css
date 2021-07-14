@@ -31,8 +31,11 @@ header {
 #background {
     padding: 10px;
     margin: 5px;
+    background-color: var(--floral-white);
     border: solid 20px var(--black-olive);
-    border-radius: 10%;
+    border-radius: 15%;
+    height: 1150px;
+    width: 700px;
 }
 
 .image {
@@ -111,6 +114,7 @@ button {
     padding: 10px;
     margin: 5px;
     display: flex;
+    justify-content: center;
     text-align: center;
     gap: 4%;
     font-size: 13px;

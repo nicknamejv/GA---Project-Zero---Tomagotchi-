@@ -121,6 +121,7 @@ const tomagotchi = {
     enterName() {
         petName = $(`#fill_pet_name`).val();
         $(`#pet_name h2`).text(`Hello World! My name is ${petName}!`);
+        $(`#enter_name`).remove();
     },
 
     // SECTION: EVOLUTION //
@@ -141,6 +142,8 @@ const tomagotchi = {
             $(`img`).attr(`src`, `http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/1c5de380c0d107a.png`);
         } else if (tomagotchi.age === 10) {
             $(`img`).attr(`src`, `http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/3846b31fd64b59f.png`);
+        } else if (tomagotchi.age === 5) {
+            // -- TODO: GAME WILL STOP 
         }
     },
 
@@ -219,13 +222,18 @@ const tomagotchi = {
         }
     },
 
-    // SECTION: Light Switch //
+    // SECTION: LIGHT //
     lightSwitchOff() {
         $(`.image`).toggleClass(`.turn_off`);
     },
 
     lightSwitchOn() {
         $(`.image`).toggleClass(`.turn_on`);
+    },
+
+    // SECTION: ENDGAME/DEATH // 
+    gameEnd() {
+        
     },
 };
 
