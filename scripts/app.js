@@ -106,6 +106,14 @@ const tomagotchi = {
         boredomLevel: 100,
         petName: ``,
 
+    // SECTION: STARTGAME //
+    startGame() {
+        tomagotchi.enterName();
+        tomagotchi.evolutionStart();
+        tomagotchi.hungerDeplete();
+        tomagotchi.playDeplete();
+        tomagotchi.sleepDeplete();
+    },
 
     // SECTION: NAME //
     enterName() {
@@ -204,6 +212,7 @@ const tomagotchi = {
         }
     },
 
+    // SECTION: Light Switch //
     lightSwitchOff() {
         $(`.image`).toggleClass(`.turn_off`);
     },
@@ -216,12 +225,7 @@ const tomagotchi = {
 
 
 // SECTION: BUTTON START GAME //
-$(`#click_me`).on(`click`, tomagotchi.enterName);
-$(`#click_me`).on(`click`, tomagotchi.evolutionStart);
-$(`#click_me`).on(`click`, tomagotchi.hungerDeplete);
-$(`#click_me`).on(`click`, tomagotchi.playDeplete);
-$(`#click_me`).on(`click`, tomagotchi.sleepDeplete);
-
+$(`#click_me`).on(`click`, tomagotchi.startGame);
 
 
 // SECTION: BUTTONS TO INCREASE //
