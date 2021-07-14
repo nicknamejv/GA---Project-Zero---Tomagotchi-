@@ -85,8 +85,8 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
     // hunger-- NOTE: DONE
     // sleepiness-- NOTE:DONE
     // boredom-- NOTE: DONE
-// create timer to showase age of pet --> when will the pet evolve? how will we increment timer?
-    // Morph the pet at X minutes
+// create timer to showase age of pet --> when will the pet evolve? how will we increment timer? -- NOTE: DONE
+    // Morph the pet at X minutes -- NOTE: DONE
 // create the buttons that user will use in game  --> what value will each button hold when user press? 
     // hunger -- NOTE: DONE!
     // sleepiness -- NOTE: DONE! 
@@ -97,7 +97,8 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
     // SLEEP -- NOTE: DONE!
     // BORDEOM -- NOTE: DONE!
 // Animate the pet -- TODO: DONE! but could be improved on!
-// Style the page
+// Style the page -- TODO
+// WHAT IS THE WIN CONDITON? -- TODO
 
 
 const tomagotchi = {

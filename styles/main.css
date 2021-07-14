@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 body {
@@ -12,6 +12,13 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+#background {
+    padding: 15px;
+    margin: 5px;
+    border: solid 20px #CFDBD5;
+    border-radius: 10%;
 }
 
 #pet_age {
@@ -34,6 +41,9 @@ body {
     animation-iteration-count: infinite;
 }
 
+#pet_age, #pet_name, #enter_name {
+}
+
 .turn_off {
     filter: brightness(0%);
 }
@@ -46,7 +56,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2px;
+    padding: 1px;
 }
 
 button {
