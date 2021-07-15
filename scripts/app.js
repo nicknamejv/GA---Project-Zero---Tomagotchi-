@@ -91,14 +91,14 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
     // hunger -- NOTE: DONE!
     // sleepiness -- NOTE: DONE! 
     // boredom -- NOTE: DONE
-    // lights -- 
+    // lights -- NOTE: DONE!
 // create triggers for killing pet (when any of the properties hits 10 trigger death)
     // HUNGER -- NOTE: DONE!
     // SLEEP -- NOTE: DONE!
     // BORDEOM -- NOTE: DONE!
 // Animate the pet -- TODO: DONE! but could be improved on!
 // Style the page -- TODO
-// WHAT IS THE WIN CONDITON? -- TODO
+// WHAT IS THE WIN CONDITON? -- TODO? 
 // ADJUST LIGHT BUTTON TO DARKEN BACKGROUND AND IMAGE -- NOTE: DONE
 
 
@@ -205,7 +205,7 @@ const tomagotchi = {
     sleep: 0,
 
     sleepDeplete() {
-        sleep = setInterval(tomagotchi.reduceSleep, 1000); // TODO: CHANGE INTERVAL AT END
+        sleep = setInterval(tomagotchi.reduceSleep, 1500); // TODO: CHANGE INTERVAL AT END
     },
 
     reduceSleep() {

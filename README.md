@@ -53,18 +53,19 @@ NES.css
 
 Images 
 
-- C3PO
+- C3PO:
     http://pixelartmaker.com/art/3846b31fd64b59f
 
 
-- R2D2
+- R2D2:
     http://pixelartmaker.com/art/1c5de380c0d107a
 
 
-- BB8
+- BB8:
     http://pixelartmaker.com/art/59142c45cab8ba7
 
-- Toptal (background images)
+- Toptal (background images):
+    https://github.com/nicknamejv/GA-Project-0-Tomagotchi/tree/main/Image
 
 
 

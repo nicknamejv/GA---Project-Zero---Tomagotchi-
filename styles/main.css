@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +14,6 @@
     --eerie-black: #252422ff;
     --flame: #eb5e28ff;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 body {
     min-height: 100vh;
@@ -32,7 +32,7 @@ header {
 }
 
 h2 {
-    font-size: 25px;
+    font-size: 40px;
 }
 
 #background {
@@ -40,7 +40,7 @@ h2 {
     margin: 5px;
     background-color: var(--floral-white);
     height: 1140px;
-    width: 670px;
+    width: 600px;
     background-image: url(../Image/cream_pixels_@2X.png);
 }
 
@@ -55,8 +55,10 @@ h2 {
     align-items: center;
     font-family: 'VT323', monospace, sans-serif;
     gap: 10%;
-    background-color: var(--pale-silver);
     height: 50px;
+    background-color: #495057;
+    background-image: url(../Image/cream_pixels_@2X.png);
+    background-blend-mode: overlay;
 }
 
 #timer, #age{
@@ -65,13 +67,13 @@ h2 {
 }
 
 #name {
-    font-size: 35px;
+    font-size: 40px;
     margin: 5px 0 5px 0;
 }
 
 
 #pet_age, #pet_name, #enter_name {
-    padding: 5px;
+    padding: 0px;
     margin: 5px;
     display: flex;
     justify-content: center;
@@ -90,8 +92,9 @@ h2 {
 
 #fill_pet_name {
     padding: 5px;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
+    height: 35px;
 }
 
 #pet_image {
@@ -100,6 +103,12 @@ h2 {
     animation: bounce;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+}
+
+.lights {
+    display: flex;
+    justify-content: center;
+    width: 75px;
 }
 
 .turn_off {
@@ -116,6 +125,7 @@ h2 {
     align-items: center;
     justify-content: center;
     padding: 5px;
+    margin: 5px;
     font-size: 30px;
 }
 
@@ -125,16 +135,14 @@ button {
     width: 75px;
     height: 30px;
     align-content: center;
-    text-align: center;
 }
 
 .buttons {
-    padding: 10px;
-    margin: 5px;
+    padding: 5px;
     display: flex;
     justify-content: center;
     text-align: center;
-    gap: 10%;
+    gap: 15%;
 }
 
 #hunger_button, #play_button, #sleep_button {
@@ -151,17 +159,20 @@ button {
     font-weight: bold;
 }
 
+#hunger_bar, #sleep_bar, #play_bar {
+    margin-bottom: 10px;
+}
+
 #click_me {
-padding-top: 5px;
-height: 45px;
-width: 200px;
-font-size: 13px;
+height: 40px;
+width: 220px;
+font-size: 20px;
 }
 
 .nes-btn {
-    padding: 5px;
-    margin: 5px;
-    font-size: 13px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
     height: 35px;
     text-align: center;
     font-weight: bold;
@@ -169,9 +180,16 @@ font-size: 13px;
 }
 
 #bottom {
-    padding: 10px;
-    margin: 15px;
-    height: 260px;
-    background-color: var(--pale-silver);
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    padding: 15px;
+    margin: 0px;
+    height: 280px;
+    max-width: 100%;
+    background-color: #495057;
+    background-image: url(../Image/cream_pixels_@2X.png);
+    background-blend-mode: overlay;
 }
+
