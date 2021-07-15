@@ -121,7 +121,7 @@ const tomagotchi = {
     enterName() {
         petName = $(`#fill_pet_name`).val();
         $(`#pet_name h2`).text(`Hello World! My name is ${petName}!`);
-        $(`#enter_name`).remove();
+        $(`#enter_name`).css(`visibility`, `hidden`);
     },
 
     // SECTION: EVOLUTION //
@@ -237,9 +237,6 @@ const tomagotchi = {
     lightSwitchOn() {
         $(`.image`).toggleClass(`.turn_on`);
     },
-
-    // SECTION: ENDGAME/DEATH // 
-    gameEnd() {}
 };
 
 
