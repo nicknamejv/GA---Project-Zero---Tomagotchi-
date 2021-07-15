@@ -24,7 +24,10 @@
         <h2>Project_Zero: Tomagotchi!</h2>
     </header>
     <section id="starter_page" class="nes-container is-rounded">
-        <div id="egg_start">
+        <div class="start">
+            <img id="starter_image" src="Image/pngegg.png">
+        </div>
+        <div id="egg_start" class="nes-container is-rounded">
             <img class="egg" src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/2b2d929f6e2a56f.png">
             <h1 class="starter_greeting">
                 Give me a name!
@@ -32,7 +35,7 @@
         </div>
         <div id="enter_name">
             <div class="nes-field">
-                <input type="text" id="fill_pet_name" placeholder="Enter Name: " class="nes-input">
+                <input type="text" id="fill_pet_name" placeholder="Enter Name: " class="nes-input" maxlength="17">
                 <button id="click_me" class="nes-btn" href="#">START GAME!</button>
             </div>
         </div>

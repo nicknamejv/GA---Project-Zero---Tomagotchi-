@@ -67,6 +67,9 @@ Images
 - Dino Egg:
     http://pixelartmaker.com/art/2b2d929f6e2a56f
 
+- Start:
+    https://www.pngegg.com/en/png-iruaw 
+
 - Toptal (background images):
     https://github.com/nicknamejv/GA-Project-0-Tomagotchi/tree/main/Image
 
