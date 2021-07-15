@@ -115,6 +115,7 @@ const tomagotchi = {
         tomagotchi.hungerDeplete();
         tomagotchi.playDeplete();
         tomagotchi.sleepDeplete();
+        tomagotchi.themeSong();
     },
 
     // SECTION: NAME //
@@ -122,6 +123,7 @@ const tomagotchi = {
         petName = $(`#fill_pet_name`).val();
         $(`#pet_name h2`).text(`Hello World! My name is ${petName}!`);
         $(`#starter_page`).css(`visibility`, `hidden`);
+        $(`#game_music`).css(`visibility`, `hidden`);
     },
 
     // SECTION: EVOLUTION //
@@ -139,9 +141,9 @@ const tomagotchi = {
             tomagotchi.age++;
             $(`#age`).text(`Age: ${tomagotchi.age}`);
         } else if (tomagotchi.age === 5) {
-            $(`img`).attr(`src`, `http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/1c5de380c0d107a.png`);
+            $(`#pet_image`).attr(`src`, `http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/1c5de380c0d107a.png`);
         } else if (tomagotchi.age === 10) {
-            $(`img`).attr(`src`, `http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/3846b31fd64b59f.png`);
+            $(`#pet_image`).attr(`src`, `http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/3846b31fd64b59f.png`);
         }
     },
 
@@ -157,7 +159,7 @@ const tomagotchi = {
         $(`#hunger_level`).text(`${tomagotchi.hungerLevel}`);
         $(`#hunger_bar`).attr(`value`, `${tomagotchi.hungerLevel}`);
         if (tomagotchi.hungerLevel <= 0) {
-            $(`img`).attr(`src`, `https://media.giphy.com/media/fdGbhuUQpGQkkuuzIr/giphy.gif`);
+            $(`pet_image`).attr(`src`, `https://media.giphy.com/media/fdGbhuUQpGQkkuuzIr/giphy.gif`);
             clearInterval(this.sleep);
             clearInterval(this.hunger);
             clearInterval(this.play);
@@ -185,7 +187,7 @@ const tomagotchi = {
         $(`#play_level`).text(`${tomagotchi.boredomLevel}`);
         $(`#play_bar`).attr(`value`, `${tomagotchi.boredomLevel}`);
         if (tomagotchi.boredomLevel <= 0) {
-            $(`img`).attr(`src`, `https://media.giphy.com/media/fdGbhuUQpGQkkuuzIr/giphy.gif`);
+            $(`#pet_image`).attr(`src`, `https://media.giphy.com/media/fdGbhuUQpGQkkuuzIr/giphy.gif`);
             clearInterval(this.sleep);
             clearInterval(this.hunger);
             clearInterval(this.play);
@@ -205,15 +207,15 @@ const tomagotchi = {
     sleep: 0,
 
     sleepDeplete() {
-        sleep = setInterval(tomagotchi.reduceSleep, 1500); // TODO: CHANGE INTERVAL AT END
+        sleep = setInterval(tomagotchi.reduceSleep, 1750); // TODO: CHANGE INTERVAL AT END
     },
 
     reduceSleep() {
-        tomagotchi.sleepLevel-=15;
+        tomagotchi.sleepLevel-=10;
         $(`#sleep_level`).text(`${tomagotchi.sleepLevel}`);
         $(`#sleep_bar`).attr(`value`, `${tomagotchi.sleepLevel}`);
         if (tomagotchi.sleepLevel <= 0) {
-        $(`img`).attr(`src`, `https://media.giphy.com/media/fdGbhuUQpGQkkuuzIr/giphy.gif`);
+            $(`#pet_image`).attr(`src`, `https://media.giphy.com/media/fdGbhuUQpGQkkuuzIr/giphy.gif`);
         clearInterval(this.sleep);
         clearInterval(this.hunger);
         clearInterval(this.play);
@@ -237,6 +239,13 @@ const tomagotchi = {
     lightSwitchOn() {
         $(`.image`).toggleClass(`.turn_on`);
     },
+
+    // SECTION: PLAY SONG //
+    themeSong() {
+        themeAudio = document.getElementById(`8_bit`);
+        themeAudio.play();
+        themeAudio.volume=0.1;
+    }
 };
 
 
