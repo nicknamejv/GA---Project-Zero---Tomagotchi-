@@ -64,6 +64,9 @@ Images
 - BB8:
     http://pixelartmaker.com/art/59142c45cab8ba7
 
+- Dino Egg:
+    http://pixelartmaker.com/art/2b2d929f6e2a56f
+
 - Toptal (background images):
     https://github.com/nicknamejv/GA-Project-0-Tomagotchi/tree/main/Image
 

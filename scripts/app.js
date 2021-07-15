@@ -121,7 +121,7 @@ const tomagotchi = {
     enterName() {
         petName = $(`#fill_pet_name`).val();
         $(`#pet_name h2`).text(`Hello World! My name is ${petName}!`);
-        $(`#enter_name`).css(`visibility`, `hidden`);
+        $(`#starter_page`).css(`visibility`, `hidden`);
     },
 
     // SECTION: EVOLUTION //
@@ -209,7 +209,7 @@ const tomagotchi = {
     },
 
     reduceSleep() {
-        tomagotchi.sleepLevel-=10;
+        tomagotchi.sleepLevel-=15;
         $(`#sleep_level`).text(`${tomagotchi.sleepLevel}`);
         $(`#sleep_bar`).attr(`value`, `${tomagotchi.sleepLevel}`);
         if (tomagotchi.sleepLevel <= 0) {
