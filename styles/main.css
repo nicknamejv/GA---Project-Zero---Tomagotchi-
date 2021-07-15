@@ -41,6 +41,7 @@ h2 {
     background-color: var(--floral-white);
     height: 1140px;
     width: 670px;
+    background-image: url(../Image/cream_pixels_@2X.png);
 }
 
 .image {
@@ -84,6 +85,7 @@ h2 {
     width: 300px;
     height: 55px;
     gap: 5%;
+    margin: 0px;
 }
 
 #fill_pet_name {
