@@ -157,6 +157,7 @@ const tomagotchi = {
         $(`#hunger_level`).text(`${tomagotchi.hungerLevel}`);
         $(`#hunger_bar`).attr(`value`, `${tomagotchi.hungerLevel}`);
         if (tomagotchi.hungerLevel <= 0) {
+            $(`img`).attr(`src`, `https://media.giphy.com/media/fdGbhuUQpGQkkuuzIr/giphy.gif`);
             clearInterval(this.sleep);
             clearInterval(this.hunger);
             clearInterval(this.play);
@@ -184,6 +185,7 @@ const tomagotchi = {
         $(`#play_level`).text(`${tomagotchi.boredomLevel}`);
         $(`#play_bar`).attr(`value`, `${tomagotchi.boredomLevel}`);
         if (tomagotchi.boredomLevel <= 0) {
+            $(`img`).attr(`src`, `https://media.giphy.com/media/fdGbhuUQpGQkkuuzIr/giphy.gif`);
             clearInterval(this.sleep);
             clearInterval(this.hunger);
             clearInterval(this.play);
@@ -211,6 +213,7 @@ const tomagotchi = {
         $(`#sleep_level`).text(`${tomagotchi.sleepLevel}`);
         $(`#sleep_bar`).attr(`value`, `${tomagotchi.sleepLevel}`);
         if (tomagotchi.sleepLevel <= 0) {
+        $(`img`).attr(`src`, `https://media.giphy.com/media/fdGbhuUQpGQkkuuzIr/giphy.gif`);
         clearInterval(this.sleep);
         clearInterval(this.hunger);
         clearInterval(this.play);
@@ -249,7 +252,6 @@ $(`#click_me`).on(`click`, tomagotchi.startGame);
 $(`#hunger_button`).on(`click`, tomagotchi.feedMe);
 $(`#play_button`).on(`click`, tomagotchi.playMe);
 $(`#sleep_button`).on(`click`, tomagotchi.sleepMe);
-
 
 
 // SECTION: LIGHTS BUTTON //
