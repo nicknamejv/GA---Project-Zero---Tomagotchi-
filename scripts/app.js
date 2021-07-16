@@ -33,7 +33,7 @@ const tomagotchi = {
     whenToEvolve() {
         tomagotchi.time++;
         $(`#timer`).text(`Timer: ${tomagotchi.time}`);
-        if (tomagotchi.time % 5 === 0) {
+        if (tomagotchi.time % 10 === 0) {
             tomagotchi.age++;
             $(`#age`).text(`Age: ${tomagotchi.age}`);
         } else if (tomagotchi.age === 5) {
@@ -136,15 +136,6 @@ const tomagotchi = {
         }
     },
 
-    // SECTION: LIGHT //
-    lightSwitchOff() {
-        $(`.image`).toggleClass(`.turn_off`);
-    },
-
-    lightSwitchOn() {
-        $(`.image`).toggleClass(`.turn_on`);
-    },
-
     // SECTION: PLAY SONG //
     themeSong() {
         themeAudio = document.getElementById(`8_bit`);
@@ -166,7 +157,7 @@ const tomagotchi = {
     $(`#hunger_button`).off(`click`);
     },
 
-    // SECTION GAMEOVER //
+    // SECTION: GAMEOVER //
     gameOver() {
         gameOverSound = new Audio (`Sounds/Game Over (8-Bit Music).mp3`);
         gameOverSound.play();

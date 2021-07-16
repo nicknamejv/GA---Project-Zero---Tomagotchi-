@@ -10,6 +10,16 @@ To create a user interactive game that replicates the well known hand-held devic
 1. To start the game you will have to first give your pet a name of your choosing and click the "Start Game" button.
 2. You will notice soon after that each bar under your pet is now decreasing at various intervals. If any of these values hit 10 your pet will die. In order to prevent this you must click the corresponding buttons to feed, play, or put your pet to sleep. 
 3. As you continue keeping your pet alive it will evolve to something else at various ages so do your best to keep it alive and see the final transformation!
+
+# Approach
+- The approach I took for this project was to add the basic HTML I needed to just visually show myself what my JavaScript was doing. After figuring out the function to decrease one of the metrics of the game it was easy to just adapt to the other two. I definitely saved CSS last knowing that it would take the longest to do especially for me who takes pride and enjoys the CSS aspect of this whole project. 
+
+# Technologies Used
+- With the use of the NES.css framework and jQuery that is what brought this project to fruition and the rest is the usual trio of JavaScript, CSS, and HTML. 
+
+# Unsolved Problems
+- If I were to list any unsolved problems that I have it is probably creating more complex animation for the images and a reset button that the user can press when they lose the game.
+
 # Wireframe 
 
 ![Image of Wireframes](https://github.com/nicknamejv/GA-Project-0-Tomagotchi/blob/main/Wireframe/PHASE%201%20-%20EGG.png?raw=true)
@@ -51,7 +61,7 @@ Images
     http://pixelartmaker.com/art/1c5de380c0d107a
 
 - BB8:
-    http://pixelartmaker.com/art/59142c45cab8ba7
+    https://www.pikpng.com/pngvi/hJiwwxb_bb-8-pixel-art-star-wars-clipart/
 
 - Dino Egg:
     http://pixelartmaker.com/art/2b2d929f6e2a56f
