@@ -26,12 +26,6 @@ This will be updated at the end.
 
 # Scripts Used:
 
-FontAwesome
-
-```
-<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
-```
-
 jQuery
 
 ```
@@ -74,7 +68,7 @@ Images
     https://github.com/nicknamejv/GA-Project-0-Tomagotchi/tree/main/Image
 
 Sounds
-    https://www.youtube.com/watch?v=kQPhwDGM4ak
+- https://www.youtube.com/watch?v=kQPhwDGM4ak
 
 
 

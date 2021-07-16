@@ -68,7 +68,7 @@ Add buttons to the screen to feed your pet, turn off the lights, and play with y
 // NOTE: This will list any features that come to mind along the way to be included after MVP
 
 // Make a starting evolution = egg
-    // Have a button that will start the evolution and move on to the first stage
+    // Have a button that will start the evolution and move on to the first stage -- NOTE: DONE
 // Add progress bar instead to show decreasing properties -- NOTE: DONE
 // Create a way to restart the game i.e. button
 // No repeating buttons. Must choose button other than what was  -- NOTE: DONE
@@ -160,6 +160,7 @@ const tomagotchi = {
         $(`#hunger_bar`).attr(`value`, `${tomagotchi.hungerLevel}`);
         if (tomagotchi.hungerLevel <= 0) {
             $(`pet_image`).attr(`src`, `https://media.giphy.com/media/fdGbhuUQpGQkkuuzIr/giphy.gif`);
+            tomagotchi.deathButton();
             clearInterval(this.sleep);
             clearInterval(this.hunger);
             clearInterval(this.play);
@@ -188,6 +189,7 @@ const tomagotchi = {
         $(`#play_bar`).attr(`value`, `${tomagotchi.boredomLevel}`);
         if (tomagotchi.boredomLevel <= 0) {
             $(`#pet_image`).attr(`src`, `https://media.giphy.com/media/fdGbhuUQpGQkkuuzIr/giphy.gif`);
+            tomagotchi.deathButton();
             clearInterval(this.sleep);
             clearInterval(this.hunger);
             clearInterval(this.play);
@@ -216,10 +218,11 @@ const tomagotchi = {
         $(`#sleep_bar`).attr(`value`, `${tomagotchi.sleepLevel}`);
         if (tomagotchi.sleepLevel <= 0) {
             $(`#pet_image`).attr(`src`, `https://media.giphy.com/media/fdGbhuUQpGQkkuuzIr/giphy.gif`);
-        clearInterval(this.sleep);
-        clearInterval(this.hunger);
-        clearInterval(this.play);
-        clearInterval(this.time);
+            tomagotchi.deathButton();
+            clearInterval(this.sleep);
+            clearInterval(this.hunger);
+            clearInterval(this.play);
+            clearInterval(this.time);
         } 
     },
 
@@ -245,6 +248,13 @@ const tomagotchi = {
         themeAudio = document.getElementById(`8_bit`);
         themeAudio.play();
         themeAudio.volume=0.1;
+    },
+
+    // SECTION: OFF BUTTONS ON DEATH //
+    deathButton() {
+    $(`#play_button`).off(`click`);
+    $(`#sleep_button`).off(`click`);
+    $(`#hunger_button`).off(`click`);
     }
 };
 
