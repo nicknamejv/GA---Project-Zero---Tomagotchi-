@@ -159,7 +159,7 @@ const tomagotchi = {
 
     // SECTION: GAMEOVER //
     gameOver() {
-        gameOverSound = new Audio (`Sounds/Game Over (8-Bit Music).mp3`);
+        gameOverSound = new Audio (`./Sounds/Game Over (8-Bit Music).mp3`);
         gameOverSound.play();
         gameOverSound.volume = 0.1;
     },
