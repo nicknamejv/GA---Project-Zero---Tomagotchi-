@@ -72,7 +72,7 @@ Images
 - Toptal (background images):
     https://github.com/nicknamejv/GA-Project-0-Tomagotchi/tree/main/Image
 
-Sounds
+sounds
 - https://www.youtube.com/watch?v=kQPhwDGM4ak
 - https://www.youtube.com/watch?v=br3OzOrARh4
 
