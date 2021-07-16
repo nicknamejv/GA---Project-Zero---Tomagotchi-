@@ -12,17 +12,14 @@ To create a user interactive game that replicates the well known hand-held devic
 3. As you continue keeping your pet alive it will evolve to something else at various ages so do your best to keep it alive and see the final transformation!
 # Wireframe 
 
+![Image of Wireframes](https://github.com/nicknamejv/GA-Project-0-Tomagotchi/blob/main/Wireframe/PHASE%201%20-%20EGG.png?raw=true)
+
 ![Image of Wireframes](https://github.com/nicknamejv/GA-Project-0-Tomagotchi/blob/469c6d1c2777ec9cc2676a522d38fa773b00fc94/Wireframe/PHASE%202%20-%20PET%20EVO.png)
 
-# Unsolved Problems/Feature Creep
-```
-This will be updated at the end.
-```
-
 # Installation
-1. Fork this repo
-2. Clone the repo into your desired directory
-3. All scripts used is listed below just simply add them to your HTML
+1. Fork this repo.
+2. Clone this repo into your desired directory.
+3. All scripts used is listed below just simply add them to your HTML.
 
 # Scripts Used:
 
@@ -50,10 +47,8 @@ Images
 - C3PO:
     http://pixelartmaker.com/art/3846b31fd64b59f
 
-
 - R2D2:
     http://pixelartmaker.com/art/1c5de380c0d107a
-
 
 - BB8:
     http://pixelartmaker.com/art/59142c45cab8ba7
@@ -69,7 +64,7 @@ Images
 
 Sounds
 - https://www.youtube.com/watch?v=kQPhwDGM4ak
-
+- https://www.youtube.com/watch?v=br3OzOrARh4
 
 
 Font

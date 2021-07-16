@@ -159,8 +159,10 @@ const tomagotchi = {
         $(`#hunger_level`).text(`${tomagotchi.hungerLevel}`);
         $(`#hunger_bar`).attr(`value`, `${tomagotchi.hungerLevel}`);
         if (tomagotchi.hungerLevel <= 0) {
-            $(`pet_image`).attr(`src`, `https://media.giphy.com/media/fdGbhuUQpGQkkuuzIr/giphy.gif`);
+            $(`#pet_image`).attr(`src`, `https://media.giphy.com/media/fdGbhuUQpGQkkuuzIr/giphy.gif`);
             tomagotchi.deathButton();
+            tomagotchi.gameOver();
+            tomagotchi.stopTheme();
             clearInterval(this.sleep);
             clearInterval(this.hunger);
             clearInterval(this.play);
@@ -190,6 +192,8 @@ const tomagotchi = {
         if (tomagotchi.boredomLevel <= 0) {
             $(`#pet_image`).attr(`src`, `https://media.giphy.com/media/fdGbhuUQpGQkkuuzIr/giphy.gif`);
             tomagotchi.deathButton();
+            tomagotchi.gameOver();
+            tomagotchi.stopTheme();
             clearInterval(this.sleep);
             clearInterval(this.hunger);
             clearInterval(this.play);
@@ -209,7 +213,7 @@ const tomagotchi = {
     sleep: 0,
 
     sleepDeplete() {
-        sleep = setInterval(tomagotchi.reduceSleep, 1750); // TODO: CHANGE INTERVAL AT END
+        sleep = setInterval(tomagotchi.reduceSleep, 1200); // TODO: CHANGE INTERVAL AT END
     },
 
     reduceSleep() {
@@ -219,6 +223,8 @@ const tomagotchi = {
         if (tomagotchi.sleepLevel <= 0) {
             $(`#pet_image`).attr(`src`, `https://media.giphy.com/media/fdGbhuUQpGQkkuuzIr/giphy.gif`);
             tomagotchi.deathButton();
+            tomagotchi.gameOver();
+            tomagotchi.stopTheme();
             clearInterval(this.sleep);
             clearInterval(this.hunger);
             clearInterval(this.play);
@@ -247,7 +253,14 @@ const tomagotchi = {
     themeSong() {
         themeAudio = document.getElementById(`8_bit`);
         themeAudio.play();
-        themeAudio.volume=0.1;
+        themeAudio.volume = 0.1;
+    },
+
+    // SECTION: STOP SONG //
+    stopTheme() {
+        stopTheme = document.getElementById(`8_bit`);
+        stopTheme.pause();
+        stopTheme.currentTime = 0;
     },
 
     // SECTION: OFF BUTTONS ON DEATH //
@@ -255,9 +268,15 @@ const tomagotchi = {
     $(`#play_button`).off(`click`);
     $(`#sleep_button`).off(`click`);
     $(`#hunger_button`).off(`click`);
-    }
-};
+    },
 
+    // SECTION GAMEOVER //
+    gameOver() {
+        gameOverSound = new Audio (`Sounds/Game Over (8-Bit Music).mp3`);
+        gameOverSound.play();
+        gameOverSound.volume = 0.1;
+    },
+};
 
 
 // SECTION: BUTTON START GAME //
