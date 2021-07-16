@@ -22,7 +22,7 @@ To create a user interactive game that replicates the well known hand-held devic
 
 # Wireframe 
 
-![Image of Wireframes](https://github.com/nicknamejv/GA-Project-0-Tomagotchi/blob/main/wireframe/PHASE%201%20-%20START%20EGG.png)
+![Image of Wireframes](https://github.com/nicknamejv/GA-Project-0-Tomagotchi/blob/main/Wireframe/PHASE%201%20-%20START%20EGG.png)
 
 ![Image of Wireframes](https://github.com/nicknamejv/GA-Project-0-Tomagotchi/blob/469c6d1c2777ec9cc2676a522d38fa773b00fc94/Wireframe/PHASE%202%20-%20PET%20EVO.png)
 
