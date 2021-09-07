@@ -1,4 +1,4 @@
-# GA: Project-Zero-Tomagotchi
+# Project-Zero-Tomagotchi
 
 ![Image of Star Wars Pixel](http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/ced5403101d612d.png)
 
